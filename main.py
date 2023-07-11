@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
@@ -49,7 +50,7 @@ user = None
 
 # Function to display sidebar and sign-in/sign-up options
 def display_sidebar():
-    st.sidebar.subheader('Navigation')
+    st.sidebar.subheader('Welcome')
     option = st.sidebar.selectbox('Go to:', ['Sign Up', 'Sign In'])
 
     return option
@@ -103,7 +104,7 @@ def det_lang():
         data = cv.transform([user_input]).toarray()
         output = model.predict(data)
         if temp:
-            st.write('Detected Language:', output[0])
+            st.write('Detected Language : ', output[0])
 
 # Display sign-up or sign-in option
 if not st.session_state.signed_in:
