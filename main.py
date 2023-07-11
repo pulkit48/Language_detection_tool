@@ -50,7 +50,7 @@ user = None
 
 # Function to display sidebar and sign-in/sign-up options
 def display_sidebar():
-    st.sidebar.subheader('Navigation')
+    st.sidebar.subheader('Welocome')
     option = st.sidebar.selectbox('Go to:', ['Sign Up', 'Sign In'])
 
     return option
