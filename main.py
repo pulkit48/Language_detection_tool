@@ -118,6 +118,9 @@ def det_lang():
        if temp:
             st.success('Detected Language: {}'.format(output[0]))
 
+det_lang()
+
+
 # Display sign-up or sign-in option
 if not st.session_state.signed_in:
     option = display_sidebar()
