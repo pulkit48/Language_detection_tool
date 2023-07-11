@@ -115,7 +115,7 @@ def det_lang():
     if user_input:
         data = cv.transform([user_input]).toarray()
         output = model.predict(data)
-       if temp:
+        if temp:
             st.success('Detected Language: {}'.format(output[0]))
 
 det_lang()
