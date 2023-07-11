@@ -11,8 +11,14 @@ from firebase_admin import auth
 
 # Check if Firebase Admin SDK has been initialized
 if not firebase_admin._apps:
-    # Initialize Firebase Admin SDK
-    cred = credentials.Certificate('firebase_credentials.json')
+    cred = credentials.Certificate({
+    "type": os.environ["FIREBASE_TYPE"],
+    "project_id": os.environ["FIREBASE_PROJECT_ID"],
+    "private_key_id": os.environ["FIREBASE_PRIVATE_KEY_ID"],
+    # Add more credential fields as needed
+    })
+
+    # Initialize Firebase with the credentials
     firebase_admin.initialize_app(cred)
 
 # Load the Tatoeba dataset
