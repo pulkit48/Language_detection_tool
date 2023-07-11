@@ -99,7 +99,19 @@ def perform_signout():
 def det_lang():
     st.write('Enter some text and the tool will predict the language of the text.')
     user_input = st.text_area('Enter a Text', height=200)
+    st.markdown("""
+        <style>
+        .my-textarea { background-color: #f5f5f5; border: 1px solid #ccc; padding: 10px; }
+        </style>
+        """, unsafe_allow_html=True)
     temp = st.button('Detect Language')
+
+    st.markdown("""
+        <style>
+        .my-button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        .my-button:hover { background-color: #45a049; }
+        </style>
+        """, unsafe_allow_html=True)
     if user_input:
         data = cv.transform([user_input]).toarray()
         output = model.predict(data)
