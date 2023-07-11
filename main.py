@@ -115,8 +115,8 @@ def det_lang():
     if user_input:
         data = cv.transform([user_input]).toarray()
         output = model.predict(data)
-        if temp:
-            st.write('Detected Language : ', output[0])
+       if temp:
+            st.success('Detected Language: {}'.format(output[0]))
 
 # Display sign-up or sign-in option
 if not st.session_state.signed_in:
