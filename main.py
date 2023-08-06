@@ -149,10 +149,10 @@ if not st.session_state.signed_in:
         perform_signin()
 
 if st.session_state.signed_in:
+    det_lang()
     st.sidebar.button('Sign Out', on_click=perform_signout)
 
-if st.session_state.signed_in:
-    det_lang()
+
 
 
 
