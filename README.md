@@ -1,4 +1,6 @@
-# Language_detection_tool : https://langdetect9899.streamlit.app/
+# Language detection tool 
+
+Portal Link: https://langdetect9899.streamlit.app/
 
 ◦ Developed a machine learning-based language detection tool with Firebase Authentication, capable of
 accurately identifying the language of textual data.
